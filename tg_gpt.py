@@ -4,7 +4,7 @@ import json
 
 
 telegram_key = '6257906376:AAG5UxtIWM8oJMg7FW8h9_0buIFj7hMzWWU'
-openai.api_key = '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'
+openai.api_key = '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'
 
 bot = telebot.TeleBot(telegram_key)
 chat_history = []
@@ -20,7 +20,7 @@ def main(message):
     reply = ""
     response = openai.Completion.create(
         prompt=message.text,
-        engine='text-davinci-003',
+        engine='gpt-3.5-turbo',
         max_tokens=150,
         temperature=0.7,
         n=1,
